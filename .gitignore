@@ -1,0 +1,51 @@
+# Repository contents follow the starter-repository structure given in the
+# Participant Handbook. Everything excluded below is either forbidden to
+# redistribute, or a large artefact that the code regenerates.
+#
+# NOTE: git does not support trailing comments on a pattern line.
+# Every comment here is on its own line.
+
+# ---------------------------------------------------------------------------
+# Public dataset (460 pairs) -- MUST NOT be committed.
+# The dataset terms forbid redistributing or publicly mirroring the data.
+# ---------------------------------------------------------------------------
+competition_data/public/ground_truth/*.png
+competition_data/public/noisy/*.png
+competition_data/public/denoised/*.png
+
+# ---------------------------------------------------------------------------
+# Preprocessed training cache -- about 5 GB, rebuilt by scripts/train.py.
+# Far above GitHub's 100 MB per-file limit.
+# ---------------------------------------------------------------------------
+cache/
+
+# ---------------------------------------------------------------------------
+# Rejected 80-epoch experiment (see report section 5). Not submitted.
+# ---------------------------------------------------------------------------
+scripts/model_80.pt
+
+# ---------------------------------------------------------------------------
+# Submitted separately via Google Drive, not part of the repo structure
+# ---------------------------------------------------------------------------
+Falconyx_Report.pdf
+Falconyx_Team_Briefing.pdf
+Falconyx.zip
+
+# ---------------------------------------------------------------------------
+# Python environment
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------------------
+# Python and editor noise
+# ---------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

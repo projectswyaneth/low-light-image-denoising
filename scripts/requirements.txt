@@ -1,0 +1,12 @@
+# Inference (required). These alone are enough to run scripts/denoise.py.
+numpy>=1.24
+opencv-python>=4.8
+Pillow>=10.0
+
+# Learned stage (optional at inference, required for training).
+# If torch is not installed, denoise.py automatically falls back to the
+# purely classical pipeline and still produces valid output.
+torch>=2.0
+
+# Self-evaluation only (evaluation/evaluate.py, provided by the organizers)
+scikit-image>=0.21
