@@ -466,11 +466,12 @@ commit that produced every number in this README and every image in
 
 A note on self-reference: a file cannot record the identifier of the commit
 that adds it, because writing the identifier changes it. The commit named
-above therefore contains the complete solution, and the single commit that
-follows it — the tip of `main` — changes nothing but these two identifier
-lines. Both are tagged (`git tag`), so either can be checked out directly.
-Nothing executable differs between them; `git diff a246fb2 HEAD`
-touches only `README.md` and `scripts/README.md`.
+above therefore contains the complete solution — all code, the checkpoint,
+and the twenty submitted images. Every commit after it is documentation only:
+`git diff a246fb2 HEAD` touches `README.md` and `scripts/README.md`
+and nothing else. No source file, no checkpoint and no submitted image
+differs between that commit and the tip of `main`, so either may be checked
+out to reproduce the submission.
 
 > **Submission freeze.** No commits may be made to this repository after the
 > preliminary-round deadline, and the checkpoint must not be modified or

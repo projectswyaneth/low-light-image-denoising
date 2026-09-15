@@ -132,9 +132,9 @@ Git Commit SHA:
 
 This is the commit containing the complete solution and the one that produced
 the submitted images. A file cannot record the identifier of the commit that
-adds it, so the single commit following it -- the tip of `main` -- changes
-nothing but the identifier lines in this file and in the root `README.md`.
-Both commits are tagged; `git diff a246fb2 HEAD` touches no code.
+adds it, so every commit after it is documentation only: `git diff a246fb2 HEAD`
+touches only this file and the root `README.md`. No source file, checkpoint or
+submitted image differs between that commit and the tip of `main`.
 
 Model Checkpoint:
 `model.pt`
