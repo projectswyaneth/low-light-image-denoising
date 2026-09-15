@@ -1,7 +1,5 @@
 # Scripts — Mora SP Cup 2026 submission
 
-> **DRAFT — items marked `<FILL>` must be completed before the deadline.**
-
 ## Overview
 
 Low-light denoising by a **hybrid classical / learned pipeline**. Every stage
@@ -119,16 +117,24 @@ tuning.
 
 | Configuration | Composite | ΔPSNR | ΔSSIM |
 | --- | --- | --- | --- |
-| Provided baseline (defect repair + NLM h=10) | `<FILL>` | `<FILL>` | `<FILL>` |
-| Classical pipeline (this repo, `--classical`) | `<FILL>` | `<FILL>` | `<FILL>` |
-| Hybrid pipeline (this repo, default) | `<FILL>` | `<FILL>` | `<FILL>` |
+| Provided baseline (defect repair + NLM h=10) | 0.2156 | +3.70 dB | +0.1687 |
+| Classical pipeline (this repo, `--classical`) | 0.5053 | +8.42 dB | +0.4236 |
+| Hybrid pipeline (this repo, default) | **0.5844** | **+9.84 dB** | **+0.4790** |
 
-Mean CPU runtime: `<FILL>` s per image.
+Mean CPU runtime: **1.43** s per image (20 images in 28.6 s, CPU-only, on an
+Intel Core i5-11260H; the script prints the device it selected). The hybrid
+pipeline scores 2.7x the provided baseline on the held-out split.
 
 ## Official Submission Information
 
 Git Commit SHA:
-`<FILL>`
+`a246fb2abd1216b91eac325b902ce7fd6631b2b7`
+
+This is the commit containing the complete solution and the one that produced
+the submitted images. A file cannot record the identifier of the commit that
+adds it, so the single commit following it -- the tip of `main` -- changes
+nothing but the identifier lines in this file and in the root `README.md`.
+Both commits are tagged; `git diff a246fb2 HEAD` touches no code.
 
 Model Checkpoint:
 `model.pt`
@@ -140,7 +146,10 @@ Expected Model Path:
 `scripts/model.pt`
 
 Model SHA-256:
-`<FILL>`
+`f5ed44cb5ccc30aa2db7a54d3a72caffe8faf23db40cab8769efb289565ebae3`
+
+Verify with `sha256sum scripts/model.pt`, or on Windows PowerShell
+`(Get-FileHash scripts\model.pt -Algorithm SHA256).Hash`.
 
 > **Submission freeze.** After the preliminary-round deadline no new commits
 > may be made to this repository, and the checkpoint must not be modified or

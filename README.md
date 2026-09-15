@@ -456,13 +456,25 @@ in place from your own copy.
 | | |
 |---|---|
 | Team | **Falconyx** |
-| Git commit SHA | `<FILL BEFORE DEADLINE>` |
+| Git commit SHA | `a246fb2abd1216b91eac325b902ce7fd6631b2b7` |
 | Model checkpoint | `scripts/model.pt` (committed directly, 1.9 MB) |
-| Model SHA-256 | `<FILL BEFORE DEADLINE>` |
+| Model SHA-256 | `f5ed44cb5ccc30aa2db7a54d3a72caffe8faf23db40cab8769efb289565ebae3` |
+
+**The commit SHA above is the official submitted code version.** It is the
+commit that produced every number in this README and every image in
+`competition_data/submissions/denoised/`.
+
+A note on self-reference: a file cannot record the identifier of the commit
+that adds it, because writing the identifier changes it. The commit named
+above therefore contains the complete solution, and the single commit that
+follows it — the tip of `main` — changes nothing but these two identifier
+lines. Both are tagged (`git tag`), so either can be checked out directly.
+Nothing executable differs between them; `git diff a246fb2 HEAD`
+touches only `README.md` and `scripts/README.md`.
 
 > **Submission freeze.** No commits may be made to this repository after the
 > preliminary-round deadline, and the checkpoint must not be modified or
-> replaced. The commit SHA above is the official submitted code version.
+> replaced.
 
 ---
 
